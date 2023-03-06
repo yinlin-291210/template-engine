@@ -1,0 +1,51 @@
+[
+  {
+    "templateStr": "<div>我是{{name}}</div>",
+    "data": {
+      "name": "xiaohu"
+    }
+  },
+  {
+    "templateStr": "<ul>\n{{#arr}}\n   <li>{{age}}</li>\n<li>{{name}}</li>\n   {{#newArr}}\n      <li>{{name}}</li>\n      {{#newArr}}\n          <li>{{name}}</li>\n      {{/newArr}} \n   {{/newArr}}\n{{/arr}}\n</ul>",
+    "data": {
+      "arr": [
+        {
+          "name": "xiaomin",
+          "age": 16,
+          "sex": "man",
+          "newArr": [
+            { "name": "xx", "newArr": [{ "name": "xx" }, { "name": "xxx" }] },
+            { "name": "xxx", "newArr": [{ "name": "xx" }, { "name": "xxx" }] }
+          ]
+        },
+        {
+          "name": "xiaoliang",
+          "age": 17,
+          "sex": "woman",
+          "newArr": [
+            { "name": "xx", "newArr": [{ "name": "xx" }, { "name": "xxx" }] },
+            { "name": "xxx", "newArr": [{ "name": "xx" }, { "name": "xxx" }] }
+          ]
+        },
+        {
+          "name": "xiaohu",
+          "age": 18,
+          "newArr": [
+            { "name": "xx", "newArr": [{ "name": "xx" }, { "name": "xxx" }] },
+            { "name": "xxx" }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "templateStr": "<ul>\n     {{#arr}}\n        <li>\n          <div class='hd'>{{name}}的基本信息</div>\n          <div class='bd'>\n            <p>姓名：{{name}}</p>\n            <p>年龄：{{age}}</p>\n            <p>性别：{{sex}}</p>\n          </div>\n        </li>\n      {{/arr}}\n    </ul>",
+    "data": {
+      "arr": [
+        { "name": "小明", "age": 12, "sex": "男" },
+        { "name": "小红", "age": 11, "sex": "女" },
+        { "name": "小王", "age": 13, "sex": "男" }
+      ]
+    }
+  }
+]
